@@ -1,0 +1,41 @@
+<html>
+
+<head>
+  <title>
+    Vue-data-binding
+  </title>
+  <style>
+    .default-color {
+      background-color: red;
+    }
+
+    .theme-color {
+      background-color: green;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="wrapper" :class="className">
+    <button v-bind:title="message" v-on:click="changeColor">Click me</button>
+    <!-- shortform -->
+    <!-- <button :title="message" @click="changeColor">Click me</button> -->
+  </div>
+</body>
+<script src="https://unpkg.com/vue@2.4.4/dist/vue.js"></script>
+<script>
+  new Vue({
+    el: '#wrapper',
+    data: {
+      message: 'Title from vue',
+      className: 'default-color'
+    },
+    methods: {
+      changeColor() {
+        this.className = 'theme-color'
+      }
+    }
+  });
+</script>
+
+</html>

@@ -1,0 +1,27 @@
+<html>
+
+<head>
+  <title>Vue-computed</title>
+</head>
+
+<body>
+  <div id="wrapper">
+    <span>{{message}}</span> {{reversedMessage}}
+  </div>
+</body>
+<script src="https://unpkg.com/vue@2.4.4/dist/vue.js"></script>
+<script>
+  let app = new Vue({
+    el: "#wrapper",
+    data: {
+      message: "hello!"
+    },
+    computed: {
+      reversedMessage() {
+        this.message.split('').reverse().join('');
+      }
+    }
+  });
+</script>
+
+</html>

@@ -1,0 +1,40 @@
+<html>
+
+<head>
+  <title>Vue-Events</title>
+</head>
+
+<body>
+  <div id="wrapper">
+    <ul>
+      <li v-for="fruit in fruits">
+        {{ fruit }}
+      </li>
+    </ul>
+    <input type="text" name="text" id="getName" v-model="getName">
+    <button v-on:click="addName">add name</button>
+    <!-- alternate onclick -->
+    <!-- <button @click="addName">add name</button> -->
+  </div>
+</body>
+<script src="https://unpkg.com/vue@2.4.4/dist/vue.js"></script>
+<script>
+  let app = new Vue({
+
+    el: "#wrapper",
+
+    data: {
+      getName: '',
+      fruits: ['apple', 'orange', 'grape', 'jackfruit']
+    },
+    // all custom functions must be inside methods.
+    methods: {
+      addName() {
+        this.fruits.push(this.getName);
+        this.getName = '';
+      }
+    }
+  });
+</script>
+
+</html>

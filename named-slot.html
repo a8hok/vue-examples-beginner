@@ -1,0 +1,32 @@
+<html>
+
+<head>
+  <title>vue-named-slot</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.5.3/css/bulma.css">
+</head>
+
+<body>
+  <div id="wrapper">
+    <button @click="isOpen=true">Click to open model box</button>
+    <model v-if="isOpen" @close="isOpen=false">
+      <template slot="title">
+        Title goes here
+      </template>
+      <template slot="body">
+        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy
+        text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen
+        book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially
+        unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and
+        more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+      </template>
+      <!-- <template slot="footer">
+        <button class="button is-success">Save changes</button>
+        <button class="button">Cancel</button>
+      </template> -->
+    </model>
+  </div>
+</body>
+<script src="https://unpkg.com/vue@2.4.4/dist/vue.js"></script>
+<script src="scripts/named-slot.js"></script>
+
+</html>

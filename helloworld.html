@@ -1,0 +1,29 @@
+<html>
+
+<head>
+  <title>
+    Vue examles- Hello world
+  </title>
+</head>
+
+<body>
+  <div id="wrapper">
+    <input type="text" id="input" v-model="message">
+    <span>{{ message2 }}</span>
+    <span>{{ message3 }}</span>
+
+  </div>
+</body>
+<script src="https://unpkg.com/vue@2.4.4/dist/vue.js"></script>
+<script>
+  new Vue({
+    el: '#wrapper',
+    data: {
+      message: 'welcome',
+      message2: 'VueJS',
+      message3: 'world'
+    }
+  });
+</script>
+
+</html>

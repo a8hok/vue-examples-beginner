@@ -1,0 +1,28 @@
+<html>
+
+<head>
+  <title>Vue-loop</title>
+</head>
+
+<body>
+  <div id="wrapper">
+    <ul>
+      <li v-for="fruit in fruits">
+        {{ fruit }}
+      </li>
+    </ul>
+  </div>
+</body>
+<script src="https://unpkg.com/vue@2.4.4/dist/vue.js"></script>
+<script>
+  let app = new Vue({
+
+    el: "#wrapper",
+    data: {
+      fruits: ['apple', 'orange', 'grape', 'jackfruit']
+    }
+
+  });
+</script>
+
+</html>

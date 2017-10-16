@@ -1,0 +1,21 @@
+<html>
+
+<head>
+  <title>vue-inline-template</title>
+</head>
+
+<body>
+  <div id="wrapper">
+    <progress-view inline-template>
+      <div>
+        <h2>This is my progress :</h2>
+        <h1> {{progValue}}</h1>
+        <button @click="progValue +=10">Click</button>
+      </div>
+    </progress-view>
+  </div>
+</body>
+<script src="https://unpkg.com/vue@2.4.4/dist/vue.js"></script>
+<script src="scripts/inline-temp.js"></script>
+
+</html>
